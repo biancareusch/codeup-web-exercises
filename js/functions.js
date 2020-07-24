@@ -84,10 +84,10 @@ calculateTip();
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-var billTotal = prompt("What is the bill total?");
-var percent = prompt("How much would you like to tip?(in percent)");
-var tipAmount = calculateTip(percent,billTotal);
-var tipAlert = alert("You should tip $" + tipAmount + ".");
+// var billTotal = prompt("What is the bill total?");
+// var percent = prompt("How much would you like to tip?(in percent)");
+// var tipAmount = calculateTip(percent,billTotal);
+// var tipAlert = alert("You should tip $" + tipAmount + ".");
 
 
 /**
@@ -100,11 +100,24 @@ var tipAlert = alert("You should tip $" + tipAmount + ".");
  * Example:
  * > var originalPrice = 100;
  * > var discountPercent = .2; // 20%
- * > applyDiscount(originalPrice, dicountPercent) // 80
+ * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
+function applyDiscount(x,y){
+    return x * y;
+}
+var originalPrice = prompt("What is the original price?");
+var discountPercent = prompt("What is the discount percentage?");
+
+applyDiscount(discountPercent, originalPrice);
+alert("The new price is $" + applyDiscount());
+
+// var billTotal = prompt("What is the bill total?");
+// var percent = prompt("How much would you like to tip?(in percent)");
+// var tipAmount = calculateTip(percent,billTotal);
+// var tipAlert = alert("You should tip $" + tipAmount + ".");
 
 
 //mini exercise:
