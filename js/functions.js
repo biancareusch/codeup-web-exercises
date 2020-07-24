@@ -8,6 +8,10 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+function sayHello(name){
+    return ("Hello " + name + "!");
+}
+
 
 /**
  * TODO:
@@ -16,6 +20,8 @@
  *
  * console.log 'helloMessage' to check your work
  */
+var helloMessage = sayHello("Bianca");
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -23,6 +29,8 @@
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+var myName = "Bianca";
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -45,6 +53,15 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo (x){
+    if (x === 2) {
+        return true;
+    }else {
+        return false;
+    }
+    return(isTwo);
+}
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -57,13 +74,21 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
+function calculateTip(x, y){
+    return (x * y)/100
+}
+calculateTip();
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var billTotal = prompt("What is the bill total?");
+var percent = prompt("How much would you like to tip?(in percent)");
+var tipAmount = calculateTip(percent,billTotal);
+var tipAlert = alert("You should tip $" + tipAmount + ".");
+
 
 /**
  * TODO:
@@ -74,7 +99,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * Example:
  * > var originalPrice = 100;
- * > var dicountPercent = .2; // 20%
+ * > var discountPercent = .2; // 20%
  * > applyDiscount(originalPrice, dicountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
@@ -83,7 +108,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 
 
 //mini exercise:
-function addTwo(x){
-    return x + 2;
-}
-addTwo(10);
+//function addTwo(x){
+//    return x + 2;
+//}
+//addTwo(10);
