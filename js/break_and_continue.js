@@ -32,9 +32,9 @@ function odd50() {
 }
 
 odd50();
- for( var i = 1; i < 50; i = i + 2){
-        console.log("Here's an odd number: "+ i);
-    // }else {
-    //    console.log("Yikes Skipping number: " + odd50());
-    // }
- }
+ // for( var i = 1; i < 50; i = i + 2){
+ //        console.log("Here's an odd number: "+ i);
+ //    if(i === odd50()){
+ //        console.log("Yikes! Skipping number: " + odd50());
+ //    }
+ // }
