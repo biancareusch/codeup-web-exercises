@@ -3,20 +3,25 @@
 //exercise 2
 function showMultiplicationTable(input){
 for(var x = 1; x <= 10; x++){
-    console.log(x + " * " + input + " = " + (x * input));
+    console.log(x + " x " + input + " = " + (x * input));
 
 }}
-showMultiplicationTable(7);
+showMultiplicationTable(9);
+
+
 
 //exercise 3
 for(var x = 1; x <=10; x++){
-    var randomNum = Math.floor(Math.random() * 150) + 50;
+    var randomNum = Math.floor(Math.random() * 181) + 20;
     if(randomNum % 2 === 0){
         console.log(randomNum + " is even");
     }else {
         console.log(randomNum + " is odd");
     }
 }
+
+
+
 
 //exercise 4
 
