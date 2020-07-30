@@ -19,3 +19,11 @@ for(var x = 1; x <=10; x++){
         console.log(randomNum + " is odd");
     }
 }
+
+var oneTwo = 1;
+
+for(x = 1; x < 10; x++){
+    for(oneTwo = 1; oneTwo < 10; oneTwo++){
+        console.log(x);
+    }
+}
