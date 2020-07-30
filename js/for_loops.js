@@ -19,13 +19,11 @@ for(var x = 1; x <=10; x++){
 }
 
 //exercise 4
-// var oneTwo = 1;
-//
-// for(x = 1; x < 10; x++){
-//     for(oneTwo = 1; oneTwo < 10; oneTwo++){
-//         console.log(x);
-//     }
-// }
+
+for(x = 1; x < 10; x++){
+    console.log(x.toString().repeat(x));
+
+}
 
 //exercise 5
 for(var x = 100; x >= 5 ; x = x - 5){
