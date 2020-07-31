@@ -19,7 +19,7 @@ console.log(names.length);
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-/console.log(names[0]);
+console.log(names[0]);
 console.log(names[1]);
 console.log(names[2]);
 console.log(names[3]);
@@ -61,11 +61,11 @@ for(var i = 0; i < names.length; i++){
     function second(){
         return names[1];
     }
-    function third(){
-        return names[3];
+    function last(){
+        return names[names.length-1];
     }
 console.log(first());
     console.log(second());
-    console.log(third());
+    console.log(last());
 
 })();
