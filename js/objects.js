@@ -72,14 +72,42 @@ console.log(shoppers.forEach(function(shopper){
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-//
-// var books= [
-//         {title: "", name: ""},
-//         {title: "", name:""},
-//         {title: "", name: ""};
-//     ];
-//
-//
+
+var books= [
+        {title: "Harry Potter",
+            author: {
+            firstName: "J.K.",
+            lastName: "Rowling"
+            }
+        },
+        {title: "What is Life.",
+            author: {
+            firstName:"Bianca",
+            lastName: "Reusch",
+            }
+        },
+        {title: "Lord of the Rings",
+            author: {
+            firstName: "J.R.R",
+            lastName: "Tolkien",
+            }
+        },
+        {title: "Game of Thrones",
+            author: {
+            firstName: "George R. R.",
+            lastName: "Martin",
+            }
+        },
+        {title: "How to Unf*ck Yourself",
+        author: {
+            firstName:"Gary John",
+            lastName: "Bishop",
+            }
+        },
+
+    ];
+
+
 
     /**
      * TODO:
@@ -105,6 +133,15 @@ console.log(shoppers.forEach(function(shopper){
      *      ---
      *      ...
      */
+books.forEach(function(book){
+        {
+        console.log("Book # " + (book.indexOf[books] + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+        }
+    });
+
 
     /**
      * Bonus:
