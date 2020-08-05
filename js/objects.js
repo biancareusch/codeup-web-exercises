@@ -13,7 +13,7 @@
      */
 var person = {
     firstName: "Bianca",
-        lastName: "Reusch",
+    lastName: "Reusch",
     }
 console.log(person.firstName);
 console.log(person.lastName);
@@ -54,9 +54,9 @@ const discountAmount = (12/100);
 
 console.log(shoppers.forEach(function(shopper){
     if(shopper.amount > 200){
-        console.log(shopper.name + " has to pay " + (shopper.amount - (shopper.amount * discountAmount)));
+        console.log(shopper.name + " now has to pay " + (shopper.amount - (shopper.amount * discountAmount)));
     } else{
-        console.log(shopper.name + "'s amount didn't qualify.");
+        console.log(shopper.name + "'s amount didn't qualify for a discount.");
     }
 })
 );
@@ -103,7 +103,7 @@ var books= [
             firstName:"Gary John",
             lastName: "Bishop",
             }
-        },
+        }
 
     ];
 
@@ -133,15 +133,17 @@ var books= [
      *      ---
      *      ...
      */
-books.forEach(function(book){
-        {
-        console.log("Book # " + (book.indexOf[books] + 1));
-        console.log("Title: " + book.title);
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-        console.log("---");
-        }
-    });
 
+function bookList(input) {
+        for (var i = 0; i < input.length; i++) {
+            var book = input[i];
+            console.log("Book # " + (i + 1));
+            console.log("Title: " + book.title);
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+            console.log("---");
+        }
+    }
+bookList(books);
 
     /**
      * Bonus:
@@ -153,5 +155,20 @@ books.forEach(function(book){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook(title, authorFirstName, authorLastName, input){
+    var newItem = {
+        title: title,
+        author: {
+            firstName: authorFirstName,
+            lastName: authorLastName,
+        }
+    }
+    input.push(newItem);
+    return input;
+}
+createBook("The Avengers", "Stanley Martin", "Lieber", books);
+bookList(books);
+
+
 
 })();
