@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    background-image: url("../pexels-steve-johnson-1484759.jpg");
+    background-position: center;
+    width: 50%;
+    height:50%;
+    font-family: "Quicksand", sans-serif;
+}
+
 .fancy-header {
     text-align: center;
 }
 
 h1, h2 {
-    color: midnightblue; /* single line comment */
+    color: #363636; /* single line comment */
     text-decoration: underline;
 }
-body {
-    background-color: lightsteelblue;
+
+ol {
+    list-style: square;
+}
+
+ul {
+    list-style: circle;
+
 }
