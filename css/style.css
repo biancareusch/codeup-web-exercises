@@ -1,4 +1,11 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    text-align: center;
+}
+
+h1, h2 {
+    color: midnightblue; /* single line comment */
     text-decoration: underline;
+}
+body {
+    background-color: lightsteelblue;
 }
