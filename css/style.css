@@ -37,3 +37,21 @@ tr {
     padding: 20px;
 }
 
+a:link {
+    color:black;
+}
+
+
+a:visited {
+    color: midnightblue;
+}
+
+
+a:hover {
+    color: lightskyblue;
+}
+
+
+a:active {
+    color: dimgrey;
+}
