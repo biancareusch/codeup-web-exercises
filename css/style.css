@@ -23,5 +23,17 @@ ol {
 
 ul {
     list-style: circle;
-
 }
+
+table{
+    padding: 20px ;
+    font-size: 20px;
+}
+td {
+    padding: 20px;
+}
+
+tr {
+    padding: 20px;
+}
+
