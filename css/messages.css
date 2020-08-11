@@ -6,9 +6,8 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 .message{
-    border-color: gray;
     border-radius: 3px;
-    border-width: medium;
+    border: thin solid lightgray;
     width: 95%;
     height: 25px;
     margin: 10px;
@@ -18,12 +17,12 @@ body, html {
 }
 
 .message-info {
-    background-color: cornflowerblue;
+    background-color: #c1d4f7;
     color: midnightblue;
 }
 
 .message-success{
-    background-color: palegreen;
+    background-color:#cef3ce;
     color: darkgreen;
 }
 
@@ -33,6 +32,6 @@ body, html {
 }
 
 .message-error{
-    background-color: lightpink;
+    background-color: #ffd9de;
     color: darkred;
 }
