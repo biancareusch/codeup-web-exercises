@@ -86,15 +86,18 @@ a {
 
 .profile-details{
     float: left;
-    width: 25%;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
 }
 .timeline{
     float: left;
-    width: 50%;
+    width: calc(50% - 1em);
+    margin: 0 0.5em;
 }
 .who-to-follow{
     float: left;
-    width: 25%;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
 }
 .container{
     padding: 2em;
@@ -102,8 +105,7 @@ a {
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
-    margin: 0.5em;
+    border-bottom: 1px var(--separator-color) solid;
     padding:0.5em;
     overflow: auto;
 }
