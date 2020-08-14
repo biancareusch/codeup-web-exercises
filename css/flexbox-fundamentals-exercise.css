@@ -23,9 +23,12 @@ h2, h3 {
     background: green;
     height: 1em;
     width: 2em;
+
 }
 
-.border {border: 2px solid black;}
+.border {border: 2px solid black;
+
+}
 
 .card {
     width: 400px;
@@ -44,9 +47,13 @@ section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
     /* enter needed declarations here */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
+    align-self: flex-start;
 }
 
 .purple-box {
@@ -57,6 +64,8 @@ section:nth-of-type(1) div:last-child {
 
 .purple-box:nth-of-type(1) {
     /* enter needed declarations here */
+    display:flex;
+
 }
 
 .purple-box:nth-of-type(2) {
