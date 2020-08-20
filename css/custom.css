@@ -1,7 +1,16 @@
+body{
+    margin: 0;
+}
+.content-body{
+    margin: 3rem;
+}
 div.jumbotron{
     background-image: url("../img/pizza.png");
     background-size: cover;
-
+}
+navbar{
+    margin: 0 2rem;
+    padding: 0;
 }
 
 h1{
@@ -17,4 +26,13 @@ h1{
 
 .display-4{
     font-size: 4.5rem;
+}
+card{
+    width: 5rem;
+}
+
+.card-body{
+    background-color: #0578f6;
+    color: white;
+
 }
