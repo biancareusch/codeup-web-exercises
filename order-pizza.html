@@ -38,7 +38,7 @@
     <h1 class="display-4">Welcome to Pizza World</h1>
     </div>
 </div>
-<h2>Build your own Pizza!</h2>
+<h2 id="crust">Build your own Pizza!</h2>
 <ul class="nav nav-tabs">
     <li class="nav-item">
         <a class="nav-link active" href="#"><span class="badge badge-secondary">1</span> Size and crust</a>
@@ -50,7 +50,7 @@
         <a class="nav-link" href="#toppings"><span class="badge badge-secondary">3</span>Toppings</a>
     </li>
 </ul>
-<div class="card" id="crust">
+<div class="card">
     <div class="card-body">
         Choose size and crust
     </div>
@@ -75,7 +75,7 @@
                     Medium (12")
                 </label>
             </div></li>
-        </ul>
+            </div></ul>
         </div>
     <div class="card-one">
         <h5 class="card-header">Crispy Thin</h5>
@@ -97,7 +97,9 @@
                         <label class="form-check-label" for="exampleRadios2">
                             Large (14")
                         </label>
-                    </div></li>
+                    </div>
+                </li>
+            </div>
         </ul>
     </div>
     <div class="card-header btn">
@@ -168,7 +170,8 @@
                                 <option>Extra</option>
                             </select>
                         </li>
-
+                    </div>
+                </div>
             </ul>
         </div>
         <div class="bottom-btn">
@@ -180,7 +183,7 @@
     </div>
 
         <div>
-            <h2 id="meat" >Build your own Pizza!</h2>
+            <h2 id="toppings" >Build your own Pizza!</h2>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link" href="#crust"><span class="badge badge-secondary">1</span> Size and crust</a>
@@ -194,7 +197,7 @@
             </ul>
 
             <div class="card">
-                <div class="card-body" id="toppings">
+                <div class="card-body">
                     Choose Toppings
                 </div>
         <div class="card-one">
@@ -222,30 +225,33 @@
                             Bacon
                         </label>
                     </li>
+
+
                     <h5 class="card-header">Choose Non-Meats</h5>
                     <div class="form-check">
                         <li class="list-group-item">
-                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="beef" value="option10">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="greenpeppers" value="option10">
                             <label class="form-check-label" for="exampleRadios1">
                                 Green Peppers
                             </label></li>
                         <li class="list-group-item">
-                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="ham" value="option10">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="mushrooms" value="option10">
                             <label class="form-check-label" for="exampleRadios2">
                                 Mushrooms
                             </label></li>
                         <li class="list-group-item">
-                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="philly" value="option10">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="onions" value="option10">
                             <label class="form-check-label" for="exampleRadios2">
                                 Onions
                             </label></li>
                         <li class="list-group-item">
-                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="bacon" value="option10">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="jalapeno" value="option10">
                             <label class="form-check-label" for="exampleRadios2">
                                 Jalapeno Peppers
                             </label>
                         </li>
-
+                    </div>
+                </div>
             </ul>
         </div>
         <div class="bottom-btn">
@@ -254,8 +260,8 @@
             </div>
         </div>
     </div>
-
-
+</div>
     </div>
+</div>
 </body>
 </html>
