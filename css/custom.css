@@ -71,3 +71,7 @@ div.form-check{
     display:flex;
     justify-content: flex-end;
 }
+.fa-shopping-cart{
+    text-align: center;
+    font-size: 1.5rem;
+}
