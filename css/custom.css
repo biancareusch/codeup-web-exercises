@@ -1,9 +1,20 @@
 div.jumbotron{
     background-image: url("../img/pizza.png");
     background-size: cover;
-    color: #4e4a49;
+
 }
 
 h1{
-background-color: rgb(255,255,255,0.5);
+    background-color: rgb(255,255,255,0.5);
+    background-repeat: repeat-x;
+    color: rgba(19, 18, 18, 0.75);
+    font-size: 5vw;
+    margin: 1rem auto;
+    /*width:100%;*/
+    text-align: center;
+}
+
+
+.display-4{
+    font-size: 4.5rem;
 }
