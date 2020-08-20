@@ -1,0 +1,9 @@
+div.jumbotron{
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+    color: #4e4a49;
+}
+
+h1{
+background-color: rgb(255,255,255,0.5);
+}
