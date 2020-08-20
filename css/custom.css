@@ -24,6 +24,7 @@ h1{
     margin: 1rem auto;
     text-align: center;
 }
+
 h2{
     margin-top: 3rem;
 }
@@ -39,20 +40,25 @@ h2{
     border-radius: 5px;
     /*padding: 5px;*/
 }
+
 .card-one{
     margin: 2rem;
     border: solid #c4bfbf 1px;
     border-radius: 5px;
 }
+
 .list-group-item{
     padding-left: 2vw;
 }
+
 .card-title{
     padding-left: 2vw;
 }
+
 .next{
     text-align:right;
 }
+
 .list-group{
     margin: 0;
 }
