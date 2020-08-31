@@ -16,9 +16,9 @@
 mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/navigation-preview-day-v4', // stylesheet location
-    center: [-98.49363, 29.42412], // starting position [lng, lat]
-    zoom: 5 // starting zoom
+    style: 'mapbox://styles/mapbox/satellite-v9', // stylesheet location
+    center: [-64.9307, 18.3419], // starting position [lng, lat]
+    zoom: 10 // starting zoom
 });
 
 
