@@ -16,13 +16,10 @@
 mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [-96.8057, 32.7787], // starting position [lng, lat]
-    zoom: 9 // starting zoom
+    style: 'mapbox://styles/mapbox/navigation-preview-day-v4', // stylesheet location
+    center: [-98.49363, 29.42412], // starting position [lng, lat]
+    zoom: 5 // starting zoom
 });
-
-
-
 
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
