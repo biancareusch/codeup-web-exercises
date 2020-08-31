@@ -14,23 +14,22 @@
 
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
 mapboxgl.accessToken = mapboxToken;
-var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
-        center: [-64.9307, 18.3419], // starting position [lng, lat]
-        zoom: 10, // starting zoom
-});
+// var map = new mapboxgl.Map({
+//         container: 'map',
+//         style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
+//         center: [-64.9307, 18.3419], // starting position [lng, lat]
+//         zoom: 10, // starting zoom
+// });
     /**********************************************
      * 					MARKERS
      *********************************************/
-    var markerOptions = {
-        color: '#63cf63',
-        draggable: true
-    }
-    var marker = new mapboxgl.Marker(markerOptions)
-        .setLngLat([-64.9307, 18.3419])
-        .addTo(map)
-        draggable = true
+    // var markerOptions = {
+    //     color: '#63cf63',
+    //     draggable: true
+    // }
+    // var marker = new mapboxgl.Marker(markerOptions)
+    //     .setLngLat([-64.9307, 18.3419])
+    //     .addTo(map)
 
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
@@ -52,14 +51,21 @@ var map = new mapboxgl.Map({
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
-var popup = new mapboxgl.Popup()
-    .setLngLat([-64.9307, 18.3419])
-    .setHTML("<p>Codeup Rocks!</p>")
-    .addTo(map)
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.489615, 29.426827])
+//     .setHTML("<p>Codeup Rocks!</p>")
+//     .addTo(map)
 
 
 
-// TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
+// TODO TOGETHER: Comment out the popup we just added. Add a popup to the USVI marker.
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-64.9307, 18.3419])
+//     .setHTML("<h1>Birthday Trip!</h1>")
+//     .addTo(map)
+
+// marker.setPopup(popup);
+
 
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
@@ -75,13 +81,36 @@ var popup = new mapboxgl.Popup()
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
+geocode("2 rotary rd, arlington, va", mapboxToken )
+    .then(function(result){
+        console.log(result);
+        var map = new mapboxgl.Map({
+            container:'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v11',
+            center:result,
+            zoom:15
+
+        });
+        //TODO: Using the geocode method above, add a marker at Codeup to the map
+        //TODO: Instead of setCenter try using map.jumpTo()
+        //TODO: Instead of setCenter try using map.flyTo()
+        var markerOptions = {
+            color: '#63cf63',
+            draggable: true
+        }
+        var marker = new mapboxgl.Marker(markerOptions)
+            .setLngLat([-77.0559, 38.8709])
+            .addTo(map)
+        // map.jumpTo()
+
+
+});
 
 
 
 
-//TODO: Using the geocode method above, add a marker at Codeup to the map
-//TODO: Instead of setCenter try using map.jumpTo()
-//TODO: Instead of setCenter try using map.flyTo()
+
+
 
 
 
