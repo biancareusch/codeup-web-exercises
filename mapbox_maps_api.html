@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API Exercise</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script src="js/keys.js" ></script>
+<script src="js/mapbox-geocoder-utils.js" ></script>
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var map = geocode("Bennelong Point, Sydney", mapboxToken)
+        .then(function(result){
+            console.log(result);
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
+                center: result, // starting position [lng, lat]
+                zoom: 14 // starting zoom
+            });
+            var markerOptions = {
+                color: '#5cffd0',
+                draggable: true
+            }
+            var marker = new mapboxgl.Marker(markerOptions)
+                .setLngLat([151.214536, -33.857723])
+                .addTo(map)
+
+            var popup;
+            popup = new mapboxgl.Popup()
+                .setLngLat([151.214536, -33.857723])
+                .setHTML("<h4>Bennelong Restaurant</h4>")
+                .addTo(map);
+
+           marker.addEventListener('click', marker.setPopup(popup))
+
+
+
+            var markerOptions2 = {
+                color: '#5cffd0',
+                draggable: true
+            }
+            var marker2 = new mapboxgl.Marker(markerOptions2)
+                .setLngLat([151.209864, -33.857864])
+                .addTo(map)
+
+            var popup2;
+            popup2 = new mapboxgl.Popup()
+                .setLngLat([151.209864, -33.857864])
+                .setHTML("<h4>Quay Restaurant</h4>")
+                .addTo(map);
+
+            marker2.addEventListener('click', marker.setPopup(popup2))
+
+
+        });
+
+
+</script>
+</body>
+</html>
