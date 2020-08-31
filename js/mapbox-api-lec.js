@@ -52,7 +52,10 @@ var map = new mapboxgl.Map({
 
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
-
+var popup = new mapboxgl.Popup()
+    .setLngLat([-64.9307, 18.3419])
+    .setHTML("<p>Codeup Rocks!</p>")
+    .addTo(map)
 
 
 
