@@ -7,58 +7,81 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
+<select id="zoom-select" >
+    <option selected disabled>Zoom level</option>
+    <option value="5">Zoom level 5</option>
+    <option value="9">Zoom level 9</option>
+    <option value="13">Zoom level 13</option>
+    <option value="15">Zoom level 15</option>
+</select>
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script src="js/keys.js" ></script>
 <script src="js/mapbox-geocoder-utils.js" ></script>
 <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-
 <script>
     mapboxgl.accessToken = mapboxToken;
-    var map = geocode("Bennelong Point, Sydney", mapboxToken)
-        .then(function(result){
-            console.log(result);
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
-                center: result, // starting position [lng, lat]
-                zoom: 14 // starting zoom
-            });
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
+        center: [151.215297, -33.856784], // starting position [lng, lat]
+        zoom: 13, // starting zoom
+});
+
+
+
+var restaurant = [{
+                address: 'Bennelong Point, Sydney',
+                popupHTML: 'Bennelong Sydney'
+},
+    {           address: 'Upper Level, Overseas Passenger Terminal, Circular Quay West, The Rocks, Sydney, AU 2000',
+                popupHTML: 'Quay'
+    },
+    {           address: '1 Dixon St, Sydney, New South Wales, Australia',
+                popupHTML: 'Yang San Park Korean BBQ',
+
+    }];
+
+
+
+restaurant.forEach(function(restaurant) {
+    geocode(restaurant.address, mapboxToken)
+        .then(function (result) {
             var markerOptions = {
                 color: '#5cffd0',
                 draggable: true
             }
-            var marker = new mapboxgl.Marker(markerOptions)
-                .setLngLat([151.214536, -33.857723])
-                .addTo(map)
-
             var popup;
             popup = new mapboxgl.Popup()
-                .setLngLat([151.214536, -33.857723])
-                .setHTML("<h4>Bennelong Restaurant</h4>")
-                .addTo(map);
-
-           marker.addEventListener('click', marker.setPopup(popup))
-
-
-
-            var markerOptions2 = {
-                color: '#5cffd0',
-                draggable: true
-            }
-            var marker2 = new mapboxgl.Marker(markerOptions2)
-                .setLngLat([151.209864, -33.857864])
+                .setHTML(restaurant.popupHTML);
+            var marker = new mapboxgl.Marker(markerOptions)
+                .setLngLat(result)
                 .addTo(map)
-
-            var popup2;
-            popup2 = new mapboxgl.Popup()
-                .setLngLat([151.209864, -33.857864])
-                .setHTML("<h4>Quay Restaurant</h4>")
-                .addTo(map);
-
-            marker2.addEventListener('click', marker.setPopup(popup2))
-
+                .setPopup(popup);
 
         });
+});
+
+
+var zoomSelect = document.querySelector('#zoom-select');
+        zoomSelect.addEventListener('change', function(){
+            console.log(zoomSelect);
+            var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value;
+        map.setZoom(zoomValue);
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>

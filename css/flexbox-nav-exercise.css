@@ -3,41 +3,52 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     display: flex;
     font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
 }
+
 nav {
     background: #929292;
     height: auto;
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display:flex;
 }
+
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     padding: 0.2em 0;
     position: absolute;
+    top: 0;
+    width:50%;
 }
+
 nav a {
     text-decoration: none;
     color: black;
     display:inline-block;
-    padding: 5px;
+    padding: 1em;
 }
+
 nav a:hover {
     color: blue;
 }
 
 .right-nav {
-    display: flex;
-    align-self: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
