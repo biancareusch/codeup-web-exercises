@@ -26,13 +26,13 @@
 
 <script>
 $('li').css('font-size', '20px');
-var heading = $('h1');
-var paraGra = $('p');
-var lists = $('li');
+var heading = $('h1').html();
+var paraGra = $('p').html();
+var lists = $('li').html();
 
 alert(heading);
 
-var topOfPage = $('h1','p','li');
+var topOfPage = $('h1','p','li').html();
 </script>
 
 </body>
