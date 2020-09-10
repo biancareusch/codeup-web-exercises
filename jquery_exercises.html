@@ -8,7 +8,8 @@
 </head>
 <body>
 <h1 class="header" id="header">This is an a h1 tag</h1>
-<p class="paragraph" id="paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis consectetur explicabo facilis, in,
+<p class="paragraph" id="paragraph"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis
+    consectetur explicabo facilis, in,
     incidunt ipsum iure laudantium nihil obcaecati odio optio perspiciatis quae quaerat quidem repellat sequi tempora
     ut.</p>
 
@@ -25,14 +26,33 @@
 
 
 <script>
-$('li').css('font-size', '20px');
-var heading = $('h1').html();
-var paraGra = $('p').html();
-var lists = $('li').html();
 
-alert(heading);
+    $('h1').click(function () {
+        $(this).css('background-color', 'lightgray');
+    });
 
-var topOfPage = $('h1','p','li').html();
+    $('p').dblclick(function () {
+        $(this).css("font-size", '18px');
+    });
+
+    $('li').hover(
+        function () {
+            $(this).css('color', 'red');
+        },
+
+        function () {
+            $(this).css('color', 'black');
+        }
+    );
+
+    // $('li').css('font-size', '20px');
+    // var heading = $('h1').html();
+    // var paraGra = $('p').html();
+    // var lists = $('li').html();
+    //
+    // alert(heading);
+    //
+    // var topOfPage = $('h1','p','li').html();
 </script>
 
 </body>
