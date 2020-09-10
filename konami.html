@@ -6,14 +6,35 @@
 </head>
 <body>
 <h1>Konami Code</h1>
+<form>
+<p>Type in your cheat code here</p>
+<input type="text" id="cheat" name="cheatCode" placeholder="Type Here"/>
+</form>
 
 <script src="js/jquery.js"></script>
 <script>
     "use strict";
-
-    $(document).keyup(function(event){
+    $(document).keyup(function (event) {
         console.log(event.keyCode);
     });
+    // 38,40,37,39,37,39,66,65,13
+var cheatCode = [38,40,37,39,37,39,66,65,13];
+    //text input field
+    //function that checks if keys were pushed in correct order
+    function cheatActive() {
+
+    }
+
+
+    // var lives = 3 -> needs to change to 30 when cheat code is entered (could have lives times 10)
+    var lives = 3;
+
+    function cheatLives () {
+        if (cheatActive) {
+            return lives * 10;
+        }
+    };
+
 </script>
 </body>
 </html>
