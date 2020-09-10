@@ -7,33 +7,54 @@
 <body>
 <h1>Konami Code</h1>
 <form>
-<p>Type in your cheat code here</p>
-<input type="text" id="cheat" name="cheatCode" placeholder="Type Here"/>
+    <h2>Type in your cheat code here</h2>
+    <input id="textfield" type="text" placeholder="Type here"/>
+    <div id="lives"></div>
 </form>
 
 <script src="js/jquery.js"></script>
 <script>
     "use strict";
-    $(document).keyup(function (event) {
-        console.log(event.keyCode);
+
+    var cheatKeys = {
+        38: 'up',
+        40: 'down',
+        37: 'left',
+        39: 'right',
+        66: 'b',
+        65: 'a'
+    };
+    var konami = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+    var i = 0;
+
+    var input = $('#textfield').keydown(function (event) {
+        var key = cheatKeys[event.keyCode];
+        var requiredKey = konami[i];
+
+        if (key === requiredKey) {
+            i++;
+            if (i === konami.length) {
+                cheatActive();
+                i = 0;
+            }
+        } else {
+            i = 0;
+        }
     });
-    // 38,40,37,39,37,39,66,65,13
-var cheatCode = [38,40,37,39,37,39,66,65,13];
-    //text input field
+
+
+
+    $('#lives').html('3 &hearts;');
+
     //function that checks if keys were pushed in correct order
     function cheatActive() {
+        $('body').css('background-color', '#add8e6');
 
+        var win = new Audio('tada.mp3');
+        win.play();
+        $('#lives').html('30 &hearts;');
+        alert('Activated Cheat');
     }
-
-
-    // var lives = 3 -> needs to change to 30 when cheat code is entered (could have lives times 10)
-    var lives = 3;
-
-    function cheatLives () {
-        if (cheatActive) {
-            return lives * 10;
-        }
-    };
 
 </script>
 </body>
