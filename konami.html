@@ -25,9 +25,10 @@
         65: 'a'
     };
     var konami = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
-    var i = 0;
+
 
     var input = $('#textfield').keydown(function (event) {
+        var i = 0;
         var key = cheatKeys[event.keyCode];
         var requiredKey = konami[i];
 
@@ -55,6 +56,8 @@
         $('#lives').html('30 &hearts;');
         alert('Activated Cheat');
     }
+
+    //TODO: currently only recognizes code if nothing else is typed in before
 
 </script>
 </body>
