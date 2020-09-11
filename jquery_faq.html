@@ -149,17 +149,11 @@
         }
     );
 
-    // $('li').last().css('background-color','yellow');
-    $('.btn-large').click(function (event) {
-        $('ul').each(function () {
-                // if ($('li').last()) {
-                    $('ul').children().last().css('background-color', '#FF0')
-                // }
-            }
-        )
-    })
-
-
+    $(".btn-large").click(function(){
+        $("ul").each(function(){
+            $(this).children().last().css('background-color','#FF0')
+        });
+    });
 </script>
 </body>
 </html>
