@@ -66,18 +66,37 @@
 
 <script src="js/jquery.js"></script>
 <script>
-    $('dd').addClass('invisible');
-    $(`.invisible`).css({
-        'visibility': 'hidden',
-        'margin': '5px'
+    $('body').css({
+        'margin': '15px',
+        'text-align': 'center'
     });
 
-    $('document').ready(function() {
-        $('.btn').click(function (event) {
-            // event.preventDefault();
-            $('dd').toggleClass('.invisible');
-        });
+    let content = $('dd').addClass('invisible');
+
+    $(`.invisible`).css({
+        'visibility': 'collapse',
+        'margin': '15px'
     });
+
+    var titles = $('dt').addClass('highlighted');
+
+
+    $('document').ready(function () {
+        $('button').click(function () {
+            $(content).toggleClass('invisible');
+        })
+    });
+
+    titles.hover(
+        function () {
+            $(this).css('background-color', 'lightblue');
+        }
+        ,
+        function () {
+            $(this).css('background-color', 'white');
+        }
+    );
+
 
 </script>
 </body>
