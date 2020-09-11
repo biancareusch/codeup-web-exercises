@@ -11,117 +11,222 @@
         dd {
             margin: 15px;
         }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .frame {
+            border: solid brown 5px;
+            border-radius: 10px;
+            height: 35vh;
+        }
+
+        img {
+            height: 35vh;
+            width: 20vw;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2vh;
+        }
     </style>
 </head>
 <body>
-<H1>Frequently Asked Questions about National Parks</H1>
-<button class="btn-large">Click for highlights</button>
-<h3>Yellowstone Park</h3>
-<ul>
-    <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode Island and
-        Delaware combined.
-    </li>
-    <li>There are more than 10,000 hydrothermal features in Yellowstone. The four types of thermal features are geysers,
-        hot springs, mud pots, and fumaroles.
-    </li>
-    <li>Yellowstone is home to more than 500 active geysers (more than half the world’s geysers).</li>
-    <li>Yellowstone Lake has 131.7 sq. miles of surface area and 141 miles of shoreline. It is the largest high
-        elevation lake in North America.
-    </li>
-</ul>
+<div class="container">
 
-<h3>Waterton Lakes National Park</h3>
-<ul>
-    <li>Waterton has some of the oldest, exposed sedimentary rock in the Rocky Mountains.</li>
-    <li>The park is part of the Crown of the Continent ecosystem - a place with unusually diverse physical, biological
-        and cultural resources. The ecosystem is one of the narrowest places in the Rocky Mountain chain.
-    </li>
-    <li>The Waterton-Glacier IPP became a UNESCO World Heritage Site in 1995.</li>
-    <li>In 2017, the Waterton-Glacier International Peace Park received provisional Gold Tier designation as
-        Waterton-Glacier International Dark Sky Park through the International Dark Sky Association, becoming the first
-        multi-national dark sky park in the world.
-    </li>
-</ul>
+    <div class="col-4">
+        <div class="frame" id="frame1"><img src="pexels-steve-johnson-1484759.jpg">
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="frame" id="frame2"><img src="img/pexels-jasmin-chew-4960254.jpg">
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="frame" id="frame3"><img src="img/pexels-roberto-nickson-2661176.jpg"></div>
+    </div>
+</div>
+<div class="btns">
+    <div class="col-3">
+        <button id="btn1">Swap</button>
+    </div>
+    <div class="col-3">
+        <button id="btn2">Swap</button>
+    </div>
+    <div class="col-3">
+        <button id="btn3">Swap</button>
+    </div>
 
-<h3>Biscayne National Park</h3>
-<ul>
-    <li>Biscayne National Park protects one of the world's most extensive coral reefs on earth.</li>
-    <li>There are four ecosystems in Biscayne National Park. These include the Coral Limestone Keys, the offshore
-        Florida Reef, the Shallow Waters of Biscayne Bay, and the Shoreline Mangrove Swamp.
-    </li>
-    <li>Bottlenose dolphins are inhabitants of Biscayne National Park's waters, as well as whales, and the West Indian
-        manatee, which is an endangered species. Other endangered species found in the park include the eastern indigo
-        snake, peregrine falcon, piping plover, the American crocodile, and the swallowtail butterfly.
-    </li>
-    <li>Biscayne National Park is the largest marine park in the United States under the National Park System. It is
-        also part of the only tropical coral reef that is alive, on the mainland of the United States.
-    </li>
-</ul>
+</div>
 
 
-<button class="btn">Show Info</button>
-<dl>
-    <dt>Who is the director of the National Park Service?</dt>
-    <dd class="invisible">Margaret Everson, Counselor to the Secretary, is exercising the delegated authority of the
-        Director of the
-        National Park Service.
-    </dd>
-
-    <dt>What government agency oversees the National Park Service?</dt>
-    <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing
-        its operation is
-        the department's Assistant Secretary for Fish, Wildlife and Parks.
-    </dd>
-
-    <dt>How many employees are in the National Park Service?</dt>
-    <dd class="invisible">
+<hr>
+<div class="container">
+    <div class="row">
+        <H1>Frequently Asked Questions about National Parks</H1>
+        <button class="btn-large">Click for highlights</button>
+        <h3>Yellowstone Park</h3>
         <ul>
-            <li>Permanent, temporary, and seasonal employees: Approximately 20,000</li>
-            <li>Volunteers: More than 279,000 in 2019</li>
-        </ul>
-    </dd>
-    <dt>What government agency oversees the National Park Service?</dt>
-    <dd class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing
-        its operation is
-        the department's Assistant Secretary for Fish, Wildlife and Parks.
-    </dd>
-    <dt>How old is the National Park System?</dt>
-    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August
-        25, 1916.
-        Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as
-        the nation's first national park.
-    </dd>
-    <dt>What is the origin of the National Park Service arrowhead?</dt>
-    <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by the Secretary of
-        the Interior on
-        July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the National Park
-        System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and water
-        representing scenic and recreational values, and the arrowhead itself representing historical and archaeological
-        values.
-    </dd>
-    <dt>How many areas are in the National Park System?</dt>
-    <dd class="invisible">The system includes 419 areas covering more than 85 million acres in every state, the District
-        of Columbia,
-        American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments,
-        battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic
-        rivers and trails, and the White House.
-    </dd>
-    <dt>What is the largest national park site? Smallest?</dt>
-    <dd class="invisible">
-        <ul>
-            <li>Largest: <a href="https://www.nps.gov/wrst/index.htm">Wrangell-St. Elias National Park and Preserve</a>,
-                AK, at 13.2 million acres
+            <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode
+                Island and
+                Delaware combined.
             </li>
-            <li>Smallest: <a href="https://www.nps.gov/thko/index.htm">Thaddeus Kosciuszko National Memorial</a>, PA, at
-                0.02 acres
+            <li>There are more than 10,000 hydrothermal features in Yellowstone. The four types of thermal
+                features are
+                geysers,
+                hot springs, mud pots, and fumaroles.
+            </li>
+            <li>Yellowstone is home to more than 500 active geysers (more than half the world’s geysers).</li>
+            <li>Yellowstone Lake has 131.7 sq. miles of surface area and 141 miles of shoreline. It is the
+                largest high
+                elevation lake in North America.
             </li>
         </ul>
-    </dd>
-    <dt>How many people visit the national parks?</dt>
-    <dd class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619.
-    </dd>
 
-</dl>
+        <h3>Waterton Lakes National Park</h3>
+        <ul>
+            <li>Waterton has some of the oldest, exposed sedimentary rock in the Rocky Mountains.</li>
+            <li>The park is part of the Crown of the Continent ecosystem - a place with unusually diverse
+                physical,
+                biological
+                and cultural resources. The ecosystem is one of the narrowest places in the Rocky Mountain
+                chain.
+            </li>
+            <li>The Waterton-Glacier IPP became a UNESCO World Heritage Site in 1995.</li>
+            <li>In 2017, the Waterton-Glacier International Peace Park received provisional Gold Tier
+                designation as
+                Waterton-Glacier International Dark Sky Park through the International Dark Sky Association,
+                becoming the
+                first
+                multi-national dark sky park in the world.
+            </li>
+        </ul>
+
+        <h3>Biscayne National Park</h3>
+        <ul>
+            <li>Biscayne National Park protects one of the world's most extensive coral reefs on earth.</li>
+            <li>There are four ecosystems in Biscayne National Park. These include the Coral Limestone Keys, the
+                offshore
+                Florida Reef, the Shallow Waters of Biscayne Bay, and the Shoreline Mangrove Swamp.
+            </li>
+            <li>Bottlenose dolphins are inhabitants of Biscayne National Park's waters, as well as whales, and
+                the West
+                Indian
+                manatee, which is an endangered species. Other endangered species found in the park include the
+                eastern
+                indigo
+                snake, peregrine falcon, piping plover, the American crocodile, and the swallowtail butterfly.
+            </li>
+            <li>Biscayne National Park is the largest marine park in the United States under the National Park
+                System. It is
+                also part of the only tropical coral reef that is alive, on the mainland of the United States.
+            </li>
+        </ul>
+
+
+        <button class="btn">Show Info</button>
+        <dl>
+            <dt>Who is the director of the National Park Service?</dt>
+            <dd class="invisible">Margaret Everson, Counselor to the Secretary, is exercising the delegated
+                authority of the
+                Director of the
+                National Park Service.
+            </dd>
+
+            <dt>What government agency oversees the National Park Service?</dt>
+            <dd class="invisible">The National Park Service is a bureau of the Department of the Interior.
+                Directly
+                overseeing
+                its operation is
+                the department's Assistant Secretary for Fish, Wildlife and Parks.
+            </dd>
+
+            <dt>How many employees are in the National Park Service?</dt>
+            <dd class="invisible">
+                <ul>
+                    <li>Permanent, temporary, and seasonal employees: Approximately 20,000</li>
+                    <li>Volunteers: More than 279,000 in 2019</li>
+                </ul>
+            </dd>
+            <dt>What government agency oversees the National Park Service?</dt>
+            <dd class="invisible">The National Park Service is a bureau of the Department of the Interior.
+                Directly
+                overseeing
+                its operation is
+                the department's Assistant Secretary for Fish, Wildlife and Parks.
+            </dd>
+            <dt>How old is the National Park System?</dt>
+            <dd class="invisible">The National Park Service was created by an act signed by President Woodrow
+                Wilson on
+                August
+                25, 1916.
+                Yellowstone National Park was established by an act signed by President Ulysses S. Grant on
+                March 1, 1872,
+                as
+                the nation's first national park.
+            </dd>
+            <dt>What is the origin of the National Park Service arrowhead?</dt>
+            <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by
+                the Secretary
+                of
+                the Interior on
+                July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the
+                National Park
+                System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and
+                water
+                representing scenic and recreational values, and the arrowhead itself representing historical
+                and
+                archaeological
+                values.
+            </dd>
+            <dt>How many areas are in the National Park System?</dt>
+            <dd class="invisible">The system includes 419 areas covering more than 85 million acres in every
+                state, the
+                District
+                of Columbia,
+                American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks,
+                monuments,
+                battlefields, military parks, historical parks, historic sites, lakeshores, seashores,
+                recreation areas,
+                scenic
+                rivers and trails, and the White House.
+            </dd>
+            <dt>What is the largest national park site? Smallest?</dt>
+            <dd class="invisible">
+                <ul>
+                    <li>Largest: <a href="https://www.nps.gov/wrst/index.htm">Wrangell-St. Elias National Park
+                        and
+                        Preserve</a>,
+                        AK, at 13.2 million acres
+                    </li>
+                    <li>Smallest: <a href="https://www.nps.gov/thko/index.htm">Thaddeus Kosciuszko National
+                        Memorial</a>,
+                        PA, at
+                        0.02 acres
+                    </li>
+                </ul>
+            </dd>
+            <dt>How many people visit the national parks?</dt>
+            <dd class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619.
+            </dd>
+
+        </dl>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
 <script src="js/jquery.js"></script>
 <script>
@@ -150,17 +255,20 @@
     );
 
 
-    $(".btn-large").click(function(){
-        $("ul").each(function(){
-            $(this).children().last().css('background-color','#FF0')
+    $(".btn-large").click(function () {
+        $("ul").each(function () {
+            $(this).children().last().css('background-color', '#FF0')
         });
     });
-    $('h3').click(function(){
-        $('h3').next().css("font-weight","bold");
+    $('h3').click(function () {
+        $('h3').next().css("font-weight", "bold");
     })
-    $('li').click(function(){
-        $(this).parent().children().first().css("color","blue");
+    $('li').click(function () {
+        $(this).parent().children().first().css("color", "blue");
     })
+
+
+
 
 </script>
 </body>
