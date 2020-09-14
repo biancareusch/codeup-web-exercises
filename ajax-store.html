@@ -5,23 +5,31 @@
 </head>
 <body>
 
+
 <h1>My Tool Store</h1>
+
+
 <button id="reload-btn">Refresh</button>
-<table id="products">
-    <thead>
-    <tr>
-        <th>Title</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Categories</th>
-    </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
+
+<div class="table-responsive justify-content-between">
+    <table id="products" class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col" colspan="5">Title</th>
+            <th scope="col" colspan="3">Quantity</th>
+            <th scope="col" colspan="3">Price</th>
+            <th scope="col" colspan="3">Categories</th>
+        </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
+<script src="js/bootstrap.js"></script>
 <script>
     (function () {
         "use strict";
@@ -39,21 +47,20 @@
             for (var i = 0; i < data.length; i++) {
                 finalHTML +=
                     '<tr>' +
-                    '<th>' + data[i].title + '</th>' +
-                    '<th>' + data[i].quantity + '</th>' +
-                    '<th>' + data[i].price + '</th>' +
-                    '<th>' + data[i].categories + '</th>' +
+                    '<th scope="row">' + (i + 1) + '</th>' +
+                    '<td colspan="5">' + data[i].title + '</td>' +
+                    '<td colspan="3">' + data[i].quantity + '</td>' +
+                    '<td colspan="3">' + data[i].price + '</td>' +
+                    '<td colspan="3">' + data[i].categories + '</td>' +
                     '</tr>'
 
             }
             $('#insertProducts').append(finalHTML);
         });
-        $('#reload-btn').click(function (){
+        $('#reload-btn').click(function () {
             location.reload();
 
         })
-
-
 
 
     })();
