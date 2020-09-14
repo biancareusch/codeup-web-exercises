@@ -5,15 +5,31 @@
     <title>Blog</title>
 </head>
 <body>
+<button id="reload-btn">Refresh</button>
 <div id="posts"></div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-    $.ajax("data/inventory.json", {
+    $.ajax("data/blog.json", {
         "format": "json"
     }).done(function (data) {
+        let finalHTML = '';
+        for (var i = 0; i < data.length; i++) {
+            finalHTML +=
+                '<h1>' + data[i].title + '</h1>' +
+                '<p>' + data[i].content + '</p>' +
+                '<p>' + data[i].categories + '</p>' +
+                '<p>' + data[i].date + '</p>' +
+                '</tr>'
+
+        }
+        $('#posts').append(finalHTML);
+    });
+    $('#reload-btn').click(function (){
+        location.reload();
+
 
     });
 </script>
