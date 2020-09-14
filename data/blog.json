@@ -16,5 +16,13 @@
             "sugar"
         ],
         "date": "February 14, 2015"
-    }
+    },{
+    "title": "The Third Post",
+    "content": "Hi.",
+    "categories": [
+        "something",
+        "interesting"
+    ],
+    "date": "June 11, 2017"
+}
 ]
