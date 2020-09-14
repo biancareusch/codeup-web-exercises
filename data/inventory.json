@@ -30,5 +30,29 @@
             "tool"
         ],
         "price": 10
+    },
+    {
+        "title": "Ladder",
+        "quantity": 5,
+        "categories": [
+            "tool", "outdoor"
+        ],
+        "price": 50
+    },
+    {
+        "title": "Bucket",
+        "quantity": 45,
+        "categories": [
+            "outdoor"
+        ],
+        "price": 5
+    },
+    {
+        "title": "leafblower",
+        "quantity": 10,
+        "categories": [
+            "tool", "outdoor", "powered"
+        ],
+        "price": 100
     }
 ]
