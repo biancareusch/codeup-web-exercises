@@ -11,6 +11,9 @@
         dd {
             margin: 15px;
         }
+        .hide{
+            display: none;
+        }
 
         .container {
             display: flex;
@@ -28,7 +31,8 @@
             height: 35vh;
             width: 20vw;
         }
-        .blue{
+
+        .blue {
             color: blue;
         }
 
@@ -37,15 +41,20 @@
             justify-content: space-around;
             margin-top: 2vh;
         }
-        .bold{
+
+        .bold {
             font-weight: bold;
         }
-        .highlight{
+
+        .highlight {
             background-color: yellow;
         }
     </style>
 </head>
 <body>
+<div><h1>Would you like to sign up for our newsletter?</h1>
+    <span class="close-btn">X</span>
+</div>
 <div class="container">
 
     <div class="col-4">
@@ -75,12 +84,14 @@
 
 
 <hr>
+<h2 class="hide" id="register">Please register for our site<a href="#"> here</a> </h2>
+
 <div class="container">
     <div class="row">
         <H1>Frequently Asked Questions about National Parks</H1>
         <button class="btn-large">Click for highlights</button>
         <h3>Yellowstone Park</h3>
-        <ul>
+        <ul class="hide">
             <li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode
                 Island and
                 Delaware combined.
@@ -98,7 +109,7 @@
         </ul>
 
         <h3>Waterton Lakes National Park</h3>
-        <ul>
+        <ul class="hide">
             <li>Waterton has some of the oldest, exposed sedimentary rock in the Rocky Mountains.</li>
             <li>The park is part of the Crown of the Continent ecosystem - a place with unusually diverse
                 physical,
@@ -117,7 +128,7 @@
         </ul>
 
         <h3>Biscayne National Park</h3>
-        <ul>
+        <ul class="hide">
             <li>Biscayne National Park protects one of the world's most extensive coral reefs on earth.</li>
             <li>There are four ecosystems in Biscayne National Park. These include the Coral Limestone Keys, the
                 offshore
@@ -141,7 +152,7 @@
         <button class="btn">Show Info</button>
         <dl>
             <dt>Who is the director of the National Park Service?</dt>
-            <dd class="invisible">Margaret Everson, Counselor to the Secretary, is exercising the delegated
+            <dd class="hide">Margaret Everson, Counselor to the Secretary, is exercising the delegated
                 authority of the
                 Director of the
                 National Park Service.
@@ -276,7 +287,13 @@
         $(this).parent().children().first().toggleClass("blue");
     })
 
-
+    $('.close-btn').click(function(){
+        $(this).parent().fadeOut();
+    });
+    $('h3').click(function(){
+       $(this).next().slideToggle();
+    });
+    $("#register").delay(8000).fadeIn(100);
 
 
 </script>
