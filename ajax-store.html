@@ -25,8 +25,12 @@
 <script>
     (function () {
         "use strict";
-        // TODO: Create an AJAX GET request for the file under data/inventory.json
-
+        // Create an AJAX GET request for the file under data/inventory.json
+        // Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        //
         $.ajax("data/inventory.json", {
             "format": "json"
         }).done(function (data) {
@@ -38,19 +42,17 @@
                     '<th>' + data[i].title + '</th>' +
                     '<th>' + data[i].quantity + '</th>' +
                     '<th>' + data[i].price + '</th>' +
-                    '<th>' + data[i].category + '</th>' +
+                    '<th>' + data[i].categories + '</th>' +
                     '</tr>'
 
-            };
+            }
             $('#insertProducts').append(finalHTML);
         });
 
 
-        // TODO: Take the data from inventory.json and append it to the products table
-        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-        //             its contents and fields
-        //       HINT: You will want to target #insertProducts for your new HTML elements
-        //
+
+
+
     })();
 </script>
 
