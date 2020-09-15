@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-        body {
-            display: flex;
-            justify-content: space-between;
-        }
+
 
     </style>
 </head>
 <body>
 <div class="container-fluid">
     <div class="page-header text-center">
-        <h1>Weather</h1>
+        <h1>Weather App</h1>
     </div>
-    <div class="row">
-        <div id="weather"></div>
+    <div class="container">
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="search" aria-describedby="emailHelp" value="City or Place here...">
+                <button type="submit" class="btn btn-primary">Find</button>
+            </div>
+        </form>
+        <hr>
+        <div class="row">
+            <div id="weather" class='float-left'></div>
+        </div>
     </div>
 
 </div>
@@ -43,21 +49,23 @@
             units: "imperial"
         }).done(function (data) {
             console.log(data);
-            for (var i = 0; i <= 40; i = i + 8) {
+            for (let i = 0; i <= data.list.length - 1; i = i + 8) {
+                let date = data.list[i].dt_txt.substring(0, 10);
+                let iconURL = "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
+                $('#img').attr('src', iconURL);
                 let finalHTML =
-                    '<div class="card text-center" style="width:20vw;">' +
-                    '<div class="card header">' + 'date' + '</div>' +
+                    '<div class="card text-center">' +
+                    '<div class="card-header">' + date + '</div>' +
                     '<div class="card-body"> ' +
                     '<ul class="list-group list-group-flush">' +
-                    '<li class="list-group-item">' + 'weather' + '</li>' +
-                    '<li class="list-group-item">' + 'description' + '</li> ' +
-                    '<li class="list-group-item">' + 'humidity' + '</li>' +
-                    '<li class="list-group-item">' + 'wind' + '</li>' +
-                    '<li class="list-group-item">' + 'pressure' + '</li>' +
+                    '<li class="list-group-item">' + data.list[i].main.temp + ' °F' + " " + '<div><img id="img" alt=""></div> ' + '</li>' +
+                    '<li class="list-group-item">' + 'Description: ' + data.list[i].weather[0].description + '</li> ' +
+                    '<li class="list-group-item">' + 'Humidity: ' + data.list[i].main.humidity + '</li>' +
+                    '<li class="list-group-item">' + 'Wind: ' + data.list[i].wind.speed + '</li>' +
+                    '<li class="list-group-item">' + 'Pressure: ' + data.list[i].main.pressure + '</li>' +
                     '</ul>' +
                     '</div>' +
                     '</div>';
-
 
                 $('#weather').append(finalHTML);
             }
