@@ -6,25 +6,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-        body{
+        body {
             font-size: 0.95rem;
         }
-#weather{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-.cards{
-    justify-content: space-around;
-    margin-right: 1vw;
-    width: 10vw;
 
-}
-#map{
+        #weather {
+            display: flex;
+            justify-content: space-around;
+        }
+        li{
+            padding: 15px;
+        }
 
-}
+        .cards {
+            /*justify-content: space-around;*/
+            margin-right: 1vw;
+            width: 30vw;
+            padding: 0 1em;
+        }
+
+        p {
+            margin: 0;
+        }
     </style>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
 <div class="container-fluid">
@@ -34,23 +39,23 @@
     <div class="container">
         <form class="form-inline">
             <div class="form-group">
-                <input type="text" class="form-control" id="search" aria-describedby="emailHelp" value="City or Place here...">
+                <input type="text" class="form-control" id="search" aria-describedby="emailHelp"
+                       value="City or Place here...">
                 <button type="submit" class="btn btn-primary">Find</button>
             </div>
         </form>
         <hr>
-        <div class="row ">
-            <div id="weather"></div>
-        </div>
+        <div id="weather"></div>
+
         <hr>
     </div>
-        <div id='map' style='width: 90%; height: 300px;'></div>
-
-
+    <div class="container">
+    <div id='map' style='width: 100%; height: 300px;'></div>
+    </div>
 
 </div>
 <script src="js/keys.js"></script>
-<script src="js/mapbox-geocoder-utils.js" ></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -75,23 +80,23 @@
                 let date = data.list[i].dt_txt.substring(0, 10);
                 let iconURL = "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
                 let finalHTML =
-                    '<div class="cards">'+
-                    '<div class="card text-center">' +
-                    '<div class="card-header">' + date + '</div>' +
-                    '<div class="card-body"> ' +
-                    '<ul class="list-group list-group-flush">' +
-                    '<li class="list-group-item">' + '<p class="font-weight-bold">' + data.list[i].main.temp + ' °F' + '</p>'+ '<div><img id="img" alt=""></div> ' + '</li>' +
-                    '<li class="list-group-item">' + 'Description: ' + '<p class="font-weight-bold">' + data.list[i].weather[0].description  + '</p>'+ '</li> ' +
-                    '<li class="list-group-item">' + 'Humidity: ' +'<p class="font-weight-bold">' +  data.list[i].main.humidity  + '</p>'+ '</li>' +
-                    '<li class="list-group-item">' + 'Wind: ' + '<p class="font-weight-bold">' +  + data.list[i].wind.speed  + '</p>'+ '</li>' +
-                    '<li class="list-group-item">' + 'Pressure: ' + '<p class="font-weight-bold">' + data.list[i].main.pressure + '</p>' + '</li>' +
-                    '</ul>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
+                '<div class="cards">'+
+                '<div class="card text-center">' +
+                '<div class="card-header">' + date + '</div>' +
+                '<div class="card-body"> ' +
+                '<ul class="list-group list-group-flush">' +
+                '<li class="list-group-item">' + '<p class="font-weight-bold">' + data.list[i].main.temp + ' °F' + '</p>'+ '<div><img id="img" class="img" alt=""></div> ' + '</li>' +
+                '<li class="list-group-item">' + 'Description: ' + '<p class="font-weight-bold">' + data.list[i].weather[0].description  + '</p>'+ '</li> ' +
+                '<li class="list-group-item">' + 'Humidity: ' +'<p class="font-weight-bold">' +  data.list[i].main.humidity  + '</p>'+ '</li>' +
+                '<li class="list-group-item">' + 'Wind: ' + '<p class="font-weight-bold">' +  + data.list[i].wind.speed  + '</p>'+ '</li>' +
+                '<li class="list-group-item">' + 'Pressure: ' + '<p class="font-weight-bold">' + data.list[i].main.pressure + '</p>' + '</li>' +
+                '</ul>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
 
                 $('#weather').append(finalHTML);
-                $('#img').attr('src', iconURL);
+                $('.img').attr('src', iconURL);
                 console.log(iconURL);
             }
 
@@ -101,9 +106,9 @@
 
         let map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/satellite-streets-v11', // stylesheet location
-            center: [151.215297, -33.856784], // starting position [lng, lat]
-            zoom: 13, // starting zoom
+            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            center: [-64.969414, 18.327129], // starting position [lng, lat]
+            zoom: 11, // starting zoom
         });
 
 
