@@ -1,0 +1,25 @@
+body {
+    font-size: 0.95rem;
+}
+
+#weather {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mapContainer {
+    justify-content: center;
+}
+
+li {
+    padding: 15px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.cards {
+    width: 50vw;
+    padding: 0 1em;
+}
