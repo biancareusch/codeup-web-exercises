@@ -2,7 +2,6 @@
         "use strict";
         mapboxgl.accessToken = mapboxToken;
 
-
         // DRAW MAP
         let map = new mapboxgl.Map({
             container: 'map',
@@ -10,7 +9,6 @@
             center: [-64.969414, 18.327129], // starting position [lng, lat]
             zoom: 11, // starting zoom
         });
-
 
         // GET WEATHER API ( coordinates)
         function weatherCoordinates(lng, lat) {
