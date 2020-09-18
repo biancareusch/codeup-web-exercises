@@ -68,6 +68,11 @@ $(document).ready(function () {
 
 
 
-    //TODO fix icons, make all cards the same size, update weather to marker coordinates, make search bar functional
+
+
+
+
+
+    //TODO fix icons, update weather to marker coordinates, make search bar functional
 }());
 
