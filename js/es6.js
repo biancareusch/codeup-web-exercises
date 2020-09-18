@@ -63,7 +63,7 @@ users.forEach((user) =>{
 
 //  replace `var` with `let` in the following declaration
 let developers = [];
-users.forEach(function({name, email, languages}) {
+users.forEach((user) => {
   // rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
