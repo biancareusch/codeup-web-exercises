@@ -75,6 +75,7 @@ $(document).ready(function () {
         if (searchLocation !== ""){
             search(searchLocation);
             $('#search').val("");
+
         }
 
     });
@@ -82,6 +83,6 @@ $(document).ready(function () {
     search("Saint Thomas");
 
 
-    //TODO fix icons, update weather to marker coordinates, make search bar functional
+    //TODO fix icons, make it clear prior search result cards
 }());
 
