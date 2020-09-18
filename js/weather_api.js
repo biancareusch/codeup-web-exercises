@@ -10,40 +10,30 @@ $(document).ready(function () {
         zoom: 11, // starting zoom
     });
 
-    //MARKER
-
-    map.on('click', function (e) {
-        // getting latitude and longitude for weather app
-        let clickCoordinates = e.lngLat;
-        let marker = new mapboxgl.Marker()
-            .setLngLat(clickCoordinates)
-            .addTo(map);
-    })
-
 
     // GET WEATHER API
     const openWeatherURL = "http://api.openweathermap.org/data/2.5/forecast";
 
+    function weatherData(lng, lat) {
         $.get(openWeatherURL, {
             APPID: openWeatherKey,
-            // lon: lng,
-            q: "Saint Thomas",
-            // lon: -64.969414,
-            // lat: lat,
-            // lat: 18.327129,
-            units: "imperial"
+            'lon': lng,
+            'lat': lat,
+            'units': 'imperial'
         }).done(function (data) {
             //DRAW HEADER
-            console.log('done');
+            console.log(data);
+            //create header with forecast city name
             let headerHTML = '<h1>' + data.city.name + '</h1>';
             $('.location').append(headerHTML);
 
             //DRAW WEATHER CARDS
-            for (let i = 0; i <= data.list.length - 1; i = i + 8) {
+            for (let i = 0; i <= data.list.length - 1; i += 8) {
                 let date = data.list[i].dt_txt.substring(0, 10);
                 let iconURL = "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
                 console.log(data);
-                let finalHTML =
+                let finalHTML = '';
+                 finalHTML =
                     '<div class="cards">' +
                     '<div class="card text-center">' +
                     '<div class="card-header">' + date + '</div>' +
@@ -62,15 +52,34 @@ $(document).ready(function () {
                 $('#weather').append(finalHTML);
                 $('.img').attr('src', iconURL);
             }
-
-
         })
+    }
 
+    function search (input) {
+        geocode(input, mapboxToken)
+            .then(function (result) { //first get weather data
+                console.log(result);
+                weatherData(result[0], result[1]);
+                return result;
+            }).then(function (data){ //then go to this location
+            map.flyTo({center: data, zoom: 12});
 
+            let marker = new mapboxgl.Marker({draggable: true})
+                .setLngLat(data)
+                .addTo(map)
+        });
+    }
+    $(".btn").click(function (e){
+        e.preventDefault();
+        let searchLocation = $('#search').val().trim();
+        if (searchLocation !== ""){
+            search(searchLocation);
+            $('#search').val("");
+        }
 
+    });
 
-
-
+    search("Saint Thomas");
 
 
     //TODO fix icons, update weather to marker coordinates, make search bar functional
